@@ -1,19 +1,28 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css';
-import Homepage from './components/MatressPage/homePage'
-import Footer from './components/MatressPage/Footer';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import "./App.css";
+import Homepage from "./components/MatressPage/Home/homePage";
+import Footer from "./components/MatressPage/Footer";
+import About from "./components/MatressPage/About";
+import Contact from "./components/MatressPage/Contact";
+import Service from "./components/MatressPage/Service";
+import Shop from "./components/MatressPage/Shop/Shop";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-    <Homepage/> 
-    <Footer/>
-    </>
-  )
+    <div>
+      <BrowserRouter>
+        <Routes>
+          <Route index element={<Homepage />} />
+          <Route path="/Shop" element={<Shop />} />
+          <Route path="/Contact" element={<Contact />} />
+          <Route path="/About" element={<About />} />
+          <Route path="/Service" element={<Service />} />
+        </Routes>
+        {/* Place Footer outside of Routes so it renders on every page */}
+        
+      </BrowserRouter>
+    </div>
+  );
 }
 
-export default App
+export default App;
