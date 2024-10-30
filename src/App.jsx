@@ -2,9 +2,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
 import Homepage from "./components/MatressPage/Home/homePage";
 import Footer from "./components/MatressPage/Footer";
-import About from "./components/MatressPage/About";
+import About from "./components/MatressPage/About/About";
 import Contact from "./components/MatressPage/Contact";
-import Service from "./components/MatressPage/Service";
+import Service from "./components/MatressPage/Services/Service";
 import Shop from "./components/MatressPage/Shop/Shop";
 
 function App() {

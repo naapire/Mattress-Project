@@ -14,7 +14,7 @@ function Product({ product }) {
       </div>
       <div className='flex justify-between flex-col font-semibold lg:text-lg text-sm px-2'>
         <h3>{product.name}</h3>
-        <h3 className='text-red-500'> GH₵ {product.prices?.[0]?.price || "N/A"}</h3>
+        <h3 className='text-red-500 my-3'> GH₵ {product.prices?.[0]?.price || "N/A"}- GH₵ {product.prices?.[1]?.price || "N/A"}</h3>
         <h4 className='text-gray-700 text-sm mb-4 line-clamp-3'>{product.description}</h4>
 
       </div>
